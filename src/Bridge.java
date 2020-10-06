@@ -73,15 +73,10 @@ public class Bridge {
 }
 
  class App3 {
-    public static void main(String[] args) {
-        paintCar(new BMW2());
-        paintCar(new Porche2());
-    }
-
-    public static void paintCar(Color color) {
-        System.out.println("Painting our car.");
-        Brand brand = new Brand(color);
-        brand.create();
-        color.fillColor();
-    }
+     public static void main(String[] args) {
+         Brand brandBmw = new BMW2(new BlackColor());
+         brandBmw.create();
+         brandBmw = new Porche2(new RedColor());
+         brandBmw.create();
+     }
 }
